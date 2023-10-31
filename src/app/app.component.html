@@ -1,0 +1,89 @@
+<div class="main">
+  <div class="header">
+    <div class="left">
+      <img src="assets/png/logo.png" alt="logo" height="29px" />
+    </div>
+    <div class="right">
+      <a routerLink="/Home">Home</a>
+      <a routerLink="/Blogs">Blogs</a>
+      <a routerLink="/Projects">Projects</a>
+      <a routerLink="/Contact">Contact</a>
+    </div>
+  </div>
+  <div class="containtent">
+    <div class="section1">
+      <div class="right">
+        {{ name }}
+      </div>
+      <div class="left">
+        <img src="assets/images/pavan.jpg" alt="pavan image" height="500px" />
+      </div>
+    </div>
+    <div class="section2">
+      <div class="left">
+        <h3>About Me</h3>
+      </div>
+      <div class="right">
+        <p>
+          i am pavan srinivas , i am a full stack developer and freelance i can
+          do webpage development, back-end devlopemt ,front-end development ,
+          video editing , crreating 3d models in blender
+        </p>
+      </div>
+    </div>
+    <div class="section3">
+      <div class="title">Latest Blogs</div>
+      <div class="blogcard">
+        <ul>
+          <li *ngFor="let blog of blogdata">
+            <a routerLink="/blog/{{ blog.id }}">
+              <img [src]="blog.imageurl" />
+              <div class="sectionContainer">
+                <div class="title">{{ blog.title }}</div>
+                <div class="description">
+                  {{ blog.description }}
+                  <!-- | slice:0:80 -->
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section4">
+      <div class="projecttitle">
+        <h3>Projects</h3>
+      </div>
+      <div class="projectcard">
+        <ul>
+          <li *ngFor="let project of projectdata">
+            <a routerLink="/project/{{ project.id }}">
+              <img [src]="project.imageurl" />
+              <div class="sectionContainer">
+                <div class="title">{{ project.ProjectTitle }}</div>
+                <div class="description">
+                  {{ project.Description }}
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <footer>
+      &copy; 2023 Kanyarashi . All rights reserved. Contact us at
+      <a href="mailto:contact@example.com">contact@example.com</a> Follow us on
+      <a href="https://www.facebook.com/yourcompany">Facebook</a> and
+      <a href="https://twitter.com/yourcompany">Twitter</a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+</div>
