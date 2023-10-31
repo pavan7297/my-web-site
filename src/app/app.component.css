@@ -170,8 +170,9 @@
   
   .section4 .projecttitle {
     text-align: center;
-    background-color: rgb(40, 41, 41);
+    background-color: rgb(54, 56, 56);
     font-size: 45px;
+    color: azure;
   }
   
   .section4 .projectcard ul {
@@ -227,4 +228,14 @@
     position: relative;
     height: 7rem;
   }
+
+  .footer{
+    text-align: center;
+    font-size: 20px;
+    /* text-decoration: none; */
+  }
+
+.footer nav li{
+ list-style-type: none; 
+}
   
